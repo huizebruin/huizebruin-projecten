@@ -6,13 +6,9 @@ Add some information about your project here.
 
 You can use the button below to install the pre-built firmware directly to your device via USB from the browser.
 
-<esp-web-install-button manifest="firmware/project-template.manifest.json"></esp-web-install-button>
+MMWave sensor <esp-web-install-button manifest="firmware/mmwave-template.manifest.json"></esp-web-install-button>
 
-MMWave sensor <esp-web-install-button manifest="firmware/project-template.manifest.json"></esp-web-install-button>
-
-
-You can use the button below to install the <b>Centrale afzuiging </b> firmware directly to your device via USB from the browser.
-<br><br>| Clean install:|  <esp-web-install-button manifest="firmware/project-template.manifest.json"></esp-web-install-button>
+Centrale afzuiging <esp-web-install-button manifest="firmware/centraleafzuiging-template.manifest.json"></esp-web-install-button>
 
 
 
