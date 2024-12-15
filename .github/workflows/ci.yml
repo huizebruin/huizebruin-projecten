@@ -20,8 +20,8 @@ jobs:
       matrix:
         #### Modify below here to match your project ####
         file:
-          - esphome/centrale-afzuiging
-          - esphome/mmwave
+          esphome/centrale-afzuiging
+          esphome/mmwave
         #### Modify above here to match your project ####
 
         esphome-version:
