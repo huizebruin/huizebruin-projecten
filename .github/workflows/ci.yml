@@ -2,9 +2,6 @@ name: CI
 
 on:
   pull_request:
-    paths:
-      - '.esphome/*.yaml'
-      - '.github/workflows/ci.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -16,28 +13,21 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 3
+      max-parallel: 5
       matrix:
-        #### Modify below here to match your project ####
         file:
-          esphome/centrale-afzuiging
-          esphome/mmwave
-        #### Modify above here to match your project ####
+          - esphome/vindriktning
+          - esphome/bluetoothproxy
+
 
         esphome-version:
-          - stable
-          - beta
-          - dev
+          - latest
+
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
       - name: ESPHome ${{ matrix.esphome-version }}
-        uses: esphome/build-action@v4.0.3
+        uses: esphome/build-action@v5.0.0
         with:
           yaml-file: ${{ matrix.file }}.yaml
-          version: ${{ matrix.esphome-version }}
-      - name: ESPHome ${{ matrix.esphome-version }} Factory
-        uses: esphome/build-action@v4.0.3
-        with:
-          yaml-file: ${{ matrix.file }}.factory.yaml
           version: ${{ matrix.esphome-version }}
