@@ -6,6 +6,7 @@
 #
 substitutions:
   device_name: "vindriktning"
+  name: "vindriktning"  
   
 esphome:
   name: '${device_name}'
