@@ -16,6 +16,8 @@ improv_serial:
 wifi:
   ap:
 
+api:
+
 web_server:
   port: 80
   version: 3
