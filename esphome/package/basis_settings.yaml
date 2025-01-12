@@ -28,7 +28,7 @@ captive_portal:
 logger:
   level: INFO
   tx_buffer_size: 100
-  esp8266_store_log_strings_in_flash: false
+  # esp8266_store_log_strings_in_flash: false
 
 ota:
   - platform: esphome
