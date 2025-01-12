@@ -4,10 +4,9 @@
 | :--- | :--- |
 |  [![last commit time][github-last-commit]][github-master] [![GitHub Activity][commits-shield]][commits] |  [![Made for ESPHome](https://img.shields.io/badge/Made_for-ESPHome-black?logo=esphome)](https://esphome.io) |
 | [![License][license-shield]](LICENSE) [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] | [![Contributors][contributors-shield]][contributors-url] [![GitHub release](https://img.shields.io/github/release/huizebruin/Huizebruin-projecten.svg)](https://GitHub.com/huizebruin/Huizebruin-projecten/releases)
-| [![CodeFactor](https://www.codefactor.io/repository/github/huizebruin/Huizebruin-projecten/badge)](https://www.codefactor.io/repository/github/huizebruin/Huizebruin-projecten) ||
 
 
-|  ![Huizebruin-projectenlogo](./static/stuff/logo.webp) |
+|  ![Huizebruin-projectenlogo](./static/images/huizebruin-projects.png) |
 
 ## Huizebruin-projecten Projects
 
@@ -17,12 +16,12 @@
 
 Wat is Huizebruin-projecten.
 
-### a list of all devices in this project
+### De ESPHome projecten die door Huizebruin gemaakt zijn komen hier te staan.
 
 
 * Ikea Air vindictering
-* centrale afzuinging (comming soon)
-* mmwave sensor on wemos d1 mini (comming soon)
+* centrale afzuinging (Binnenkort online)
+* mmwave sensor on wemos d1 mini (Binnenkort online)
 
 
 ## Support
@@ -40,9 +39,6 @@ En natuurlijk ook in contact komen met meerdere HomeAssistant gebruikers!
 
 [![Discord][discord-shield]][discord]
 
-### E-mail
-
-Je kan me ook altijd een mailtje sturen. dit kan naar Huizebruin-projecten@[nogtebepalen].nl. Ik zal hier zo snel mogelijk op reageren. Ik zal altijd proberen te reageren binnen 2 werkdagen.
 
 [commits-shield]: https://img.shields.io/github/commit-activity/m/huizebruin/Huizebruin-projecten.svg
 [discord]: https://discord.gg/hKPgwWNHwH
