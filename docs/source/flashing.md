@@ -1,5 +1,5 @@
 ---
-title: "Web Flash-tool
+title: Web Flash-tool
 description: Firmware Web Installer
 ---
 
@@ -37,15 +37,15 @@ Flash of vind je apparaat met de volgende opties:
 <ul class="radios">
 <li>
     <label><input type="radio" name="type" value="luxmeter" /> luxmeter</label>
-    <img src="/images/bh1750.webp" width="50px" alt="Luxmeter Image" class="img-thumbnail me-2" />
-</li>
+    ![](../images/images/bh1750.webp)
 <li>
     <label><input type="radio" name="type" value="vindriktning" /> vindriktning met wemos d1 mini</label>
-    <img src="/images/vindriktning.avif" width="50px" alt="Vindriktning Image" class="img-thumbnail me-2" />
+    ![](../images/vindriktning.avif)
 </li>
 <li>
     <label><input type="radio" name="type" value="bluetoothproxy" /> bluetoothproxy</label>
-    <img src="/images/icon_ORmG5v707-GcOoCIPLAKEq_wCuuxqAQTUNtc3z23ufw=.png" width="50px" alt="Bluetooth Proxy Image" class="img-thumbnail me-2" />
+    ![](../images/icon_ORmG5v707-GcOoCIPLAKEq_wCuuxqAQTUNtc3z23ufw=.png)
+    
 </li>
 </ul>
 <p class="button-row" align="center">
