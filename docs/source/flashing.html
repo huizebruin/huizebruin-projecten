@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module" integrity="sha384-gugQ6PELTRVfKNYWF/V9cA0EVPc55HFXvLDPTe9CeYAG8YoOBJyICok9wy73ynru" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-dark text-white">
+  <!-- Navbar will be populated by JavaScript -->
+  <div id="navbar"></div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-9">
+        <main id="main-content">
+
+          <div class="radios">
+            <table class="table table-hover table-dark">
+              <tr>
+                <td>
+                  <label>
+                    <input type="radio" name="type" value="luxmeter" checked aria-label="Select Luxmeter"/>
+                    <img src="./images/bh1750.webp" width="50px" alt="Luxmeter Image" class="img-thumbnail me-2" />
+                    <b>Luxmeter</b>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <input type="radio" name="type" value="vindriktning" aria-label="Select vindriktning" />
+                    <img src="./images/vindriktning.avif" width="50px" alt="Vindriktning Image" class="img-thumbnail me-2" />
+                    <b>IKEA Vindriktning</b>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+
+                <td>
+                  <label>
+                    <input type="radio" name="type" value="bluetoothproxy" aria-label="Select bluetoothproxy"/>
+                    <img src="./images/icon_ORmG5v707-GcOoCIPLAKEq_wCuuxqAQTUNtc3z23ufw=.png" width="50px" alt="Bluetooth Proxy Image" class="img-thumbnail me-2" />
+                    <b>Bluetooth Proxy</b>
+                  </label>
+                </td>
+              </tr>
+            </table>
+
+            <br>
+            <p class="button-row text-center">
+              <esp-web-install-button></esp-web-install-button>
+            </p>
+          </div>
+
+          <br>
+        </main>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>
