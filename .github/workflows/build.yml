@@ -23,7 +23,7 @@ jobs:
       release-url: "https://github.com/huizebruin/Huizebruin-projecten/releases"
       release-summary: "** Check the release notes for more information. **"
 
-consolidate:
+  consolidate:
     name: Consolidate firmwares 🚀
     runs-on: ubuntu-latest
     needs: build
