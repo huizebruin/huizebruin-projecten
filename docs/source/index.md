@@ -9,7 +9,7 @@ Door mijn werk te delen, hoop ik de drempel te verlagen voor jou om in de opwind
 Dank je wel voor je bezoek, en ik moedig je aan om de verschillende projecten te verkennen. Laten we samen het meeste
 uit wat ESPHome te bieden heeft halen!
 
-Follow [flashing](flashing.md) for the initial installation / setup
+Volg ["Web Flash-tool](flashing.md) voor de initiële installatie / configuratie
 
 :material-github: [Github project](https://github.com/huizebruin/Huizebruin-projecten)
 
