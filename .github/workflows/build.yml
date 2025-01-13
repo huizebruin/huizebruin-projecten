@@ -15,8 +15,8 @@ jobs:
     uses: esphome/workflows/.github/workflows/build.yml@main
     with:
       files: |
-        esphome/vindriktning.yaml
-        esphome/bluetoothproxy.yaml
+        \docs/source/esphome/vindriktning.yaml
+        \docs/source/esphome/bluetoothproxy.yaml
 
         
       esphome-version: 2024.12.2
@@ -45,7 +45,7 @@ jobs:
       - name: Copy files
         run: |-
           mkdir output
-          cp -R static/* output/
+          cp -R docs/static/* output/
           cp -R firmwares/* output/
       - name: Copy manifest files to root and modify paths # This is required so that older firmwares can update to newer firmwares with new manifest paths
         run: |-
