@@ -18,12 +18,12 @@ jobs:
         \docs/source/esphome/vindriktning.yaml
         \docs/source/esphome/bluetoothproxy.yaml
 
-        
+
       esphome-version: 2024.12.2
       release-url: "https://github.com/huizebruin/Huizebruin-projecten/releases"
       release-summary: "** Check the release notes for more information. **"
 
- consolidate:
+consolidate:
     name: Consolidate firmwares 🚀
     runs-on: ubuntu-latest
     needs: build
