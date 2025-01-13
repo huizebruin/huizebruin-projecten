@@ -1,0 +1,45 @@
+---
+# BluetoothProxy
+#
+# a simple ESPHome integration to make an bluetoothproxy
+# © Huizebruin.nl
+#
+substitutions:
+  device_name: "bluetoothproxy"
+  name: "bluetoothproxy"
+
+  
+esphome:
+  name: '${device_name}'
+  name_add_mac_suffix: true
+  comment: '${device_description}'
+  project:
+    name: "huizebruin.Huizebruin-projecten_${device_name}"
+    version: "${project_version}"
+  min_version: 2024.12.2
+  platformio_options:
+    board_build.f_flash: 40000000L
+    board_build.flash_mode: dio
+    board_build.flash_size: 4MB
+
+
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: esp-idf
+    sdkconfig_options:
+      CONFIG_BT_BLE_42_FEATURES_SUPPORTED: y
+      CONFIG_BT_BLE_50_FEATURES_SUPPORTED: n
+
+dashboard_import:
+  package_import_url: github://huizebruin/Huizebruin-projecten/esphome/bluetoothproxy.yaml
+
+packages:
+  remote_package:
+    url: https://github.com/huizebruin/Huizebruin-projecten
+    ref: main
+    files:
+  #specific esp32 basis settings
+      - esphome/package/bluetoothproxy.yaml
+      - esphome/package/basis_settings.yaml
+    refresh: 0d
