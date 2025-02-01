@@ -21,9 +21,7 @@ dashboard_import:
 
   
 wifi:
-ota:
-  - platform: esphome
-    id: ota_esphome
+
 #------------------------##------------------------##------------------------##------------------------#
 # ⬇ Hieronder niets veranderen tenzij je het overal goed aanpast ⬇ #
 # ⬇ Schakel fallback-hotspot (captive portal) in voor het geval de wifi-verbinding mislukt ⬇ #
@@ -43,6 +41,9 @@ logger:
 #  # ⬇ Enable Home Assistant API ⬇ # 
 api:
 
+ota:
+  - platform: esphome
+    id: ota_esphome
 
 #  ⬇ Enable time component voor reset elke nacht ⬇ #
 time:

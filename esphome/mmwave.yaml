@@ -25,6 +25,6 @@ packages:
     url: https://github.com/huizebruin/Huizebruin-projecten
     ref: main
     files:
-      - esphome/components/basis.yaml
-      - esphome/components/mmwave1.yml
+      - esphome/package/basis.yaml
+      - esphome/package/mmwave1.yml
     refresh: 0d
