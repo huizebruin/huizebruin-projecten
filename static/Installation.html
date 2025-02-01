@@ -199,7 +199,27 @@
               in de voorbereidingsstap, aangezien het ingedrukt houden van de `BOOT`-knop ervoor zorgt dat de ESP32
               opnieuw opstart in de bootloader-modus.</li>
           </ul>
-
+      <h2>Drivers</h2>
+      
+      If the serial port is not showing up, your computer might be missing the
+      drivers for the USB serial chip used in your ESP device.<br> These drivers
+      work for most ESP devices:
+      
+      <ul>
+        <li>
+          CP2102 (square chip):
+          <a href="https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers" rel="noopener"
+            target="_blank">driver</a>
+        </li>
+        <li>
+          CH341:
+          <a href="https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers" rel="noopener" target="_blank">driver</a>
+        </li>
+        <li>
+          CH340:
+          <a href="https://sparks.gogo.co.nz/ch340.html" rel="noopener" target="_blank">driver</a>
+        </li>
+      </ul>
         </main>
       </div>
     </div>
