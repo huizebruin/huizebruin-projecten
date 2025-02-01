@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tool.nl - Installatie</title>
+  <title>Huizebruin-projecten - Installatie</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="./assets/icon.ico">
-  <meta name="description" content="Telt uw waterverbruik met tool en Home Assistant en ESPHome" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <meta name="description" content="ESPHome-projecten vanaf Huizebruin en zijn discord groep voor Home Assistant en ESPHome." />
   <meta name="keywords"
     content="tool, watermeter, home assistant, esphome, s0-poort, water counter, water, huizebruin watermeter, 5V NPN, Actaris, diy, Elster, Elster V100, esphome, home assistant, huizebruin, Itron, LJ12A3-4-Z/BX-5V, Maddalena, pcb, pulsteller, s0 kwh, tool, Sensus, slimme watermeter, tool, watermeter, watermeter home assistant, watermeter npn ">
   <meta name="author" content="Huizebruin" />
   <meta name="copyright" content="Huizebruin" />
   <meta http-equiv="cache-control" content="no-cache" />
-  <meta property="og:title" content="tool.nl" />
-  <meta property="og:site_name" content="tool.nl" />
-  <meta property="og:url" content="https://tool.nl" />
+  <meta property="og:title" content="https://huizebruin.github.io/Huizebruin-projecten/" />
+  <meta property="og:site_name" content="https://huizebruin.github.io/Huizebruin-projecten/" />
+  <meta property="og:url" content="https://huizebruin.github.io/Huizebruin-projecten/" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="Telt uw waterverbruik met tool en Home Assistant en ESPHome." />
+  <meta property="og:description" content="ESPHome-projecten vanaf Huizebruin en zijn discord groep voor Home Assistant en ESPHome." />
   <meta property="og:image" content="./assets/header.png" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HB5QGY82J"></script>
@@ -43,7 +43,7 @@
         <main id="main-content">
           <br>
           <h2 id="Installatie">Installatie</h2>
-          <p>Voorbereiding: Zorg ervoor dat u de bestanden hebt geïnstalleerd om de Wemos d1 te laten communiceren met
+          <p>Voorbereiding: Zorg ervoor dat u de bestanden hebt geïnstalleerd om de ESP8266 of ESP32 te laten communiceren met
             uw pc/laptop. Kijk hier voor meer informatie bij de foutberichten pagina.</p>
           <p>En u moet de ESP verbonden hebben aan uw pc of laptop met een kabel die zowel stroom als gegevens
             transporteert.</p>
@@ -51,7 +51,7 @@
             via USB vanaf de browser.</p>
           <br>
 
-          <h2 id="tool-Installatie">tool Installatie</h2>
+          <h2 id="tool-Installatie">Installatie</h2>
           <br>
           <p>Kies uw product om het om te zetten in een tool voor Home Assistant.</p>
           <p>Geen programma of software vereist.</p>
@@ -83,7 +83,12 @@
 
           <div aria-hidden="true" class="hidden info vindriktning">
             <h3>vindriktning</h3>
-            <p>Haak een D1 Mini, het liefst met een USB-poort (en dus een 5V-regulator). Er lijken veel versies
+                            <ul>
+                              <li>
+                                <a href="https://s.click.aliexpress.com/e/_omFfI1r" target="_blank">wemos d1 mini C aansluiting</a>
+                              </li>
+                            </ul>
+            <p>verbind de D1 Mini, het liefst met een USB-poort (en dus een 5V-regulator). Er lijken veel versies
               beschikbaar te zijn met licht verschillende functionaliteiten op dat gebied.</p>
             <p>Open het IKEA Vindriktning-apparaat en let op de testpunten op de rand van de printplaat.</p>
             <p>Verbind:</p>
@@ -97,6 +102,12 @@
 
           <div aria-hidden="true" class="hidden info bluetoothproxy">
             <h3>bluetoothproxy</h3>
+            <ul>
+              <li>
+                <a href="https://s.click.aliexpress.com/e/_oliGfhL" target="_blank">ESP32 in usb stick vorm met behuizing</a>
+              </li>
+              <li><a href="https://s.click.aliexpress.com/e/_oBIcL5T" target="_blank">ESP32 in usb stick vorm met behuizing</a></li>
+              </ul>
             <p>De Bluetooth proxy van ESPHome geeft Home Assistant maximaal 3 simultane actieve verbindingen te zien.
               Apparaten die een continue actieve verbinding onderhouden zullen een van deze permanent gebruiken, terwijl
               apparaten die periodiek hun verbindingen verbroken en hersteld hebben, toestaan dat er meer dan 3 van hen
@@ -108,15 +119,74 @@
 
           <div aria-hidden="true" class="hidden info centrale-afzuiging">
             <h3>Centrale afzuiging</h3>
+                            <ul>
+                              <li>
+                                <a href="https://s.click.aliexpress.com/e/_omFfI1r" target="_blank">wemos d1 mini C aansluiting</a>
+                              </li>
+                            </ul>
             <p>info komt nog<br> </p>
             <p><img src="./assets/esp8266.webp" class="img-fluid w-25" alt="centrale-afzuiging"></p>
           </div>
 
           <div aria-hidden="true" class="hidden info mmwave">
             <h3>mmwave</h3>
-            <p>ESP8266 LD2410<br>5V ------ VCC<br>GND -------
+                <ul>
+                  <li>
+            <a href="https://s.click.aliexpress.com/e/_optFvi9" target="_blank">LD2410C</a></li>
+            <li>
+            <a href="https://s.click.aliexpress.com/e/_omFfI1r" target="_blank">wemos d1 mini C aansluiting</a>
+            </li>
+            </ul>
+            <p>ESP8266 LD2410C<br>5V ------ VCC<br>GND -------
               GND<br>RX ------ Uart-Tx<br>TX ------- Uart-Rx
             </p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <td>Radar</td>
+      </tr>
+      <tr>
+        <th>Detectietype</th>
+        <td>Afstand</td>
+      </tr>
+      <tr>
+        <th>Aanwezigheid</th>
+        <td>Instelbaar</td>
+      </tr>
+      <tr>
+        <th>Instelbare detectieafstand</th>
+        <td>Ja</td>
+      </tr>
+      <tr>
+        <th>Instelbare gevoeligheid</th>
+        <td>Ja</td>
+      </tr>
+      <tr>
+        <th>Minimaal meetbereik [cm]</th>
+        <td>0.1</td>
+      </tr>
+      <tr>
+        <th>Maximaal meetbereik [cm]</th>
+        <td>500</td>
+      </tr>
+      <tr>
+        <th>Kleinste resolutie [mm]</th>
+        <td>10</td>
+      </tr>
+      <tr>
+        <th>Maximale detectiehoek [°]</th>
+        <td>120</td>
+      </tr>
+      <tr>
+        <th>Instelbare vertragingstijd</th>
+        <td>Ja</td>
+      </tr>
+      <tr>
+        <th>Werkfrequentie [GHz]</th>
+        <td>24</td>
+      </tr>
+    </table>
+            </form>
             <p><img src="./assets/ld2410c-wemos.jpeg" class="img-fluid w-25" alt="mmwave"></p>
           </div>
 
