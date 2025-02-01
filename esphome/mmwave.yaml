@@ -26,5 +26,5 @@ packages:
     ref: main
     files:
       - esphome/package/basis.yaml
-      - esphome/package/mmwave1.yml
+      - esphome/package/mmwave1.yaml
     refresh: 0d
