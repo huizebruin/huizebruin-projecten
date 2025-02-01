@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tool.nl - Installation</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>tool.nl - Installatie</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="./assets/icon.ico">
-  <meta name="description" content="Count your water use with the tool and Home Assistant and ESPHome" />
+  <meta name="description" content="Telt uw waterverbruik met tool en Home Assistant en ESPHome" />
   <meta name="keywords"
-    content="tool, watermeter, home assistant, esphome, s0 port, water counter, water, huizebruin watermeter, 5v NPN, Actaris, diy, Elster, Elster V100, esphome, home assistant, huizebruin, Itron, LJ12A3-4-Z/BX-5V, Maddalena, pcb, pulsteller, s0 kwh, tool, Sensus, slimme watermeter, tool, watermeter, watermeter home assistant, watermeter npn ">
+    content="tool, watermeter, home assistant, esphome, s0-poort, water counter, water, huizebruin watermeter, 5V NPN, Actaris, diy, Elster, Elster V100, esphome, home assistant, huizebruin, Itron, LJ12A3-4-Z/BX-5V, Maddalena, pcb, pulsteller, s0 kwh, tool, Sensus, slimme watermeter, tool, watermeter, watermeter home assistant, watermeter npn ">
   <meta name="author" content="Huizebruin" />
   <meta name="copyright" content="Huizebruin" />
   <meta http-equiv="cache-control" content="no-cache" />
@@ -18,7 +19,7 @@
   <meta property="og:site_name" content="tool.nl" />
   <meta property="og:url" content="https://tool.nl" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="Count your water use with the tool and Home Assistant and ESPHome." />
+  <meta property="og:description" content="Telt uw waterverbruik met tool en Home Assistant en ESPHome." />
   <meta property="og:image" content="./assets/header.png" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HB5QGY82J"></script>
@@ -26,111 +27,143 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-9HB5QGY82J');
   </script>
   <script type="module" src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"></script>
-  </head>
+</head>
 
-  <body>
-    <div id="navbar"></div>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-3">
-          <div id="sidebar"></div>
-        </div>
-        <div class="col-md-9">
-          <main id="main-content">
-      <br>
-        <h2 id="Installation">Installation</h2>
-        
-          Pre-requisite: Make sure you have installed the drivers for the Wemos d1 to communicate with your pc / laptop. Look
-          for it at the troubleshooting page.<br>
-          And you must connect the esp to your pc or laptop with a cable that transfers both power and data.<br>
-          You can use the button below to install the <b>tools</b> firmware directly to your device via USB from the
-          browser.<br>
-        
-<br>
-        <h2 id="tool-Installation">tool Installation</h2>
-        <br>
-          Pick your product to turn it into a tool for Home Assistant.<br>
-        
-          No programming or other software required.
-        <br><br>
+<body>
+  <div id="navbar"></div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar"></div>
+      </div>
+      <div class="col-md-9">
+        <main id="main-content">
+          <br>
+          <h2 id="Installatie">Installatie</h2>
+          <p>Voorbereiding: Zorg ervoor dat u de bestanden hebt geïnstalleerd om de Wemos d1 te laten communiceren met
+            uw pc/laptop. Kijk hier voor meer informatie bij de foutberichten pagina.</p>
+          <p>En u moet de ESP verbonden hebben aan uw pc of laptop met een kabel die zowel stroom als gegevens
+            transporteert.</p>
+          <p>U kunt de knop hieronder gebruiken om het <b>tools</b> firmware rechtstreeks naar uw device te installeren
+            via USB vanaf de browser.</p>
+          <br>
 
-        <div class="radios">
-          <label>
-            <input type="radio" name="type" value="vindriktning" checked /><br>
-            <td><b>vindriktning</b></td><br>
-          </label>
-          <label>
-            <input type="radio" name="type" value="bluetoothproxy" /><br>
-            <td><b>bluetoothproxy</b></td><br>
-          </label>
+          <h2 id="tool-Installatie">tool Installatie</h2>
+          <br>
+          <p>Kies uw product om het om te zetten in een tool voor Home Assistant.</p>
+          <p>Geen programma of software vereist.</p>
+          <br><br>
 
-        </div>
+          <div class="radios">
+            <label>
+              <input type="radio" name="type" value="vindriktning" checked />
+              <div><b>vindriktning</b></div>
+            </label>
+            <label>
+              <input type="radio" name="type" value="bluetoothproxy" />
+              <div><b>bluetoothproxy</b></div>
+            </label>
+            <label>
+              <input type="radio" name="type" value="centrale-afzuiging" />
+              <div><b>Centrale afzuiging</b></div>
+            </label>
+            <label>
+              <input type="radio" name="type" value="mmwave" />
+              <div><b>mmwave aan wemos d1 mini</b></div>
+            </label>
+          </div>
 
-        <p class="button-row" align="center">
-          <esp-web-install-button></esp-web-install-button>
-        </p>
-        <hr>
-        <center>
-          <div class="hidden info vindriktning">
+          <p class="button-row" align="center">
+            <esp-web-install-button></esp-web-install-button>
+          </p>
+          <hr />
+
+          <div aria-hidden="true" class="hidden info vindriktning">
             <h3>vindriktning</h3>
-            <p>
-              Standard with watermeter(npn) and kWh meter imp(50-100ms)<br>
-              D2 & D5
-            </p>
-            <p><img src="./assets/npn-kwh-s0.jpg" class="img-fluid" alt="tool-npn-s0"> </p>
+            <p>Haak een D1 Mini, het liefst met een USB-poort (en dus een 5V-regulator). Er lijken veel versies
+              beschikbaar te zijn met licht verschillende functionaliteiten op dat gebied.</p>
+            <p>Open het IKEA Vindriktning-apparaat en let op de testpunten op de rand van de printplaat.</p>
+            <p>Verbind:</p>
+            <ul>
+              <li>D1: 5V -> V: +5V</li>
+              <li>D1: G -> V: GND</li>
+              <li>D1: D2 -> C: REST</li>
+            </ul>
+            <p><img src="./assets/vindriktning.avif" class="img-fluid w-25" alt="vindriktning"></p>
           </div>
 
-          <div class="hidden info bluetoothproxy">
+          <div aria-hidden="true" class="hidden info bluetoothproxy">
             <h3>bluetoothproxy</h3>
-            <p>
-              Standard with watermeter(npn)<br>
-              D2
-            </p>
-            <p><img src="./assets/npn.jpg" class="img-fluid" alt="tool-npn"> </p>
+            <p>De Bluetooth proxy van ESPHome geeft Home Assistant maximaal 3 simultane actieve verbindingen te zien.
+              Apparaten die een continue actieve verbinding onderhouden zullen een van deze permanent gebruiken, terwijl
+              apparaten die periodiek hun verbindingen verbroken en hersteld hebben, toestaan dat er meer dan 3 van hen
+              worden gebruikt (op statistiek gebaseerd). Passief gepresenteerde sensorgegevens die door zekere apparaten
+              worden gepresenteerd zonder actieve verbindingen worden afzonderlijk van deze ontvangen en zijn niet
+              beperkt tot een specifieke hoeveelheid.</p>
+            <p><img src="./assets/ble-esphome.png" class="img-fluid w-25" alt="ble"></p>
           </div>
 
+          <div aria-hidden="true" class="hidden info centrale-afzuiging">
+            <h3>Centrale afzuiging</h3>
+            <p>info komt nog<br> </p>
+            <p><img src="./assets/esp8266.webp" class="img-fluid w-25" alt="centrale-afzuiging"></p>
+          </div>
 
-        
+          <div aria-hidden="true" class="hidden info mmwave">
+            <h3>mmwave</h3>
+            <p>ESP8266 LD2410<br>5V ------ VCC<br>GND -------
+              GND<br>RX ------ Uart-Tx<br>TX ------- Uart-Rx
+            </p>
+            <p><img src="./assets/ld2410c-wemos.jpeg" class="img-fluid w-25" alt="mmwave"></p>
+          </div>
 
-          
-    <script>
-      document.querySelectorAll('input[name="type"]').forEach((radio) =>
-        radio.addEventListener("change", () => {
-          const button = document.querySelector("esp-web-install-button");
-          button.manifest = `./${radio.value}/manifest.json`;
+          <h2>Foutoplossing</h2>
+          <ul>
+            <li>Er kan noodzakelijk zijn dat u handmatig de bootloader-modus instelt voordat u probeert de ESP te
+              flashen met de WebFlasher.</li>
+            <li>Probeer de `BOOT`-knop op uw bord ingedrukt te houden totdat u ziet dat de WebFlasher het flashgeheugen
+              aan het wissen is en daadwerkelijk de firmware installeert. Dit kan helpen als een reset wordt uitgevoerd
+              in de voorbereidingsstap, aangezien het ingedrukt houden van de `BOOT`-knop ervoor zorgt dat de ESP32
+              opnieuw opstart in de bootloader-modus.</li>
+          </ul>
 
-          document.querySelectorAll(".info").forEach((info) => {
-            info.classList.add("hidden");
-          });
-          document
-            .querySelector(`.info.${radio.value}`)
-            .classList.remove("hidden");
-        })
-      );
-      document
-        .querySelector('input[name="type"]:checked')
-        .dispatchEvent(new Event("change"));
-      if (new URLSearchParams(document.location.search).has("special")) {
-        document.body.classList.add("show-special");
-      }
-    </script>
-      </main>
+        </main>
       </div>
-      </div>
-      </div>
-      
-      
-      <div id="footer"></div>
-      
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-     
-      <script src="./js/script.js"></script>
-      </body>
-      
-      </html>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+    integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+
+  <script>
+    document.querySelectorAll('input[name="type"]').forEach((radio) =>
+      radio.addEventListener("change", () => {
+        const button = document.querySelector("esp-web-install-button");
+        button.manifest = `./${radio.value}/manifest.json`;
+
+        document.querySelectorAll(".info").forEach((info) => {
+          info.classList.add("hidden");
+        });
+        document.querySelector(`.info.${radio.value}`).classList.remove("hidden");
+      })
+    );
+    document.querySelector('input[name="type"]:checked').dispatchEvent(new Event("change"));
+    if (new URLSearchParams(document.location.search).has("special")) {
+      document.body.classList.add("show-special");
+    }
+  </script>
+</body>
+
+</html>
