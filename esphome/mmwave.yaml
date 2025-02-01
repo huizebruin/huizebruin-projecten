@@ -18,13 +18,13 @@ esp8266:
   restore_from_flash: true
 
 dashboard_import:
-  package_import_url: github://huizebruin/huizebruin-projects/docs/source/esphome/mmwave.yaml@main
+  package_import_url: github://huizebruin/huizebruin-projects/esphome/mmwave.yaml@main
 
 packages:
   remote_package:
     url: https://github.com/huizebruin/huizebruin-projects/
     ref: main
     files:
-      - docs/source/esphome/components/basis.yaml
-      - docs/source/esphome/components/mmwave1.yml
+      - esphome/components/basis.yaml
+      - esphome/components/mmwave1.yml
     refresh: 0d
