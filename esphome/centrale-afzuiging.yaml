@@ -13,7 +13,7 @@ esphome:
   board: d1_mini
   comment: '${device_description}'
   project:
-    name: huizebruin-projecten_${name}
+    name: huizebruin-projecten.${name}
     version: "${vdate}"
   
 dashboard_import:
@@ -21,7 +21,9 @@ dashboard_import:
 
   
 wifi:
-
+ota:
+  - platform: esphome
+    id: ota_esphome
 #------------------------##------------------------##------------------------##------------------------#
 # ⬇ Hieronder niets veranderen tenzij je het overal goed aanpast ⬇ #
 # ⬇ Schakel fallback-hotspot (captive portal) in voor het geval de wifi-verbinding mislukt ⬇ #
@@ -41,10 +43,6 @@ logger:
 #  # ⬇ Enable Home Assistant API ⬇ # 
 api:
 
-ota:
-  safe_mode: true
-  reboot_timeout: 10min
-  num_attempts: 5
 
 #  ⬇ Enable time component voor reset elke nacht ⬇ #
 time:
