@@ -21,8 +21,7 @@ dashboard_import:
 
   
 wifi:
-  ssid: !secret ssid
-  password: !secret password
+
 #------------------------##------------------------##------------------------##------------------------#
 # ⬇ Hieronder niets veranderen tenzij je het overal goed aanpast ⬇ #
 # ⬇ Schakel fallback-hotspot (captive portal) in voor het geval de wifi-verbinding mislukt ⬇ #

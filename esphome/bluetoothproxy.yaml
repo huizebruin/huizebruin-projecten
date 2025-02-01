@@ -32,7 +32,7 @@ esp32:
       CONFIG_BT_BLE_50_FEATURES_SUPPORTED: n
 
 dashboard_import:
-  package_import_url: github://huizebruin/Huizebruin-projecten/esphome/bluetoothproxy.yaml
+  package_import_url: github://huizebruin/huizebruin-projecten/esphome/bluetoothproxy.yaml
 
 packages:
   remote_package:
