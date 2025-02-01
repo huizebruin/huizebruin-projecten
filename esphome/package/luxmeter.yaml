@@ -1,7 +1,0 @@
-i2c:
-
-sensor:
-  - platform: bh1750
-    name: "Lichtintensiteit"
-    address: 0x23
-    update_interval: 30s
