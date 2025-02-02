@@ -41,13 +41,13 @@
 
 ## Types of changes / Soorten wijzigingen .
 <!--
-  What type of change does your PR introduce to the Huizebruin-projecten?
+  What type of change does your PR introduce to the huizebruin-projecten?
   NOTE: Please, check only 1! box!
   If your PR requires multiple boxes to be checked, you'll most likely need to
   split it into multiple PRs. This makes things easier and faster to code review.
 
   nl
-  Wat voor soort verandering introduceert uw PR in de code van de Huizebruin-projecten?
+  Wat voor soort verandering introduceert uw PR in de code van de huizebruin-projecten?
    LET OP: Gelieve slechts 1 aan te vinken! doos!
    Als uw PR vereist dat meerdere vakjes worden aangevinkt, zult u dat waarschijnlijk moeten doen
    splits het op in meerdere PR's. Dit maakt het eenvoudiger en sneller om code te beoordelen.
@@ -121,7 +121,7 @@
   
 If user-visible functionality or configuration variables are added/modified / Als door de gebruiker zichtbare functionaliteit of configuratievariabelen worden toegevoegd/gewijzigd :
   - [ ] Documentation added/updated in the readme file / Documentatie toegevoegd/bijgewerkt in de readme file.
-  - [ ] Added/updated documentation for the web page / Documentatie toegevoegd/bijgewerkt voor de webpagina (huizebruin.github.io/Huizebruin-projecten)[huizebruin.github.io/Huizebruin-projecten].
+  - [ ] Added/updated documentation for the web page / Documentatie toegevoegd/bijgewerkt voor de webpagina (huizebruin.github.io/huizebruin-projecten)[huizebruin.github.io/huizebruin-projecten].
 
 <!--
   Thank you for contributing <3

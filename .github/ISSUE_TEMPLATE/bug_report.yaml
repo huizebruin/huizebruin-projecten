@@ -1,12 +1,12 @@
 name: "Bug report"
-description: "Create a bug report to help us improve the Huizebruin-projecten Project!"
+description: "Create a bug report to help us improve the huizebruin-projecten Project!"
 labels: ["bug", "question", "triage:not-checked"]
 body:
   - type: checkboxes
     id: no-duplicate-issues
     attributes:
       label: "Please verify that this bug has NOT been raised before."
-      description: "Search in the issues sections by clicking [HERE](https://github.com/huizebruin/Huizebruin-projecten/issues?q=) and read the [Discussions](https://github.com/huizebruin/Huizebruin-projecten/discussions)!"
+      description: "Search in the issues sections by clicking [HERE](https://github.com/huizebruin/huizebruin-projecten/issues?q=) and read the [Discussions](https://github.com/huizebruin/huizebruin-projecten/discussions)!"
       options:
         - label: "I checked and didn't find a similar issue"
           required: true
@@ -32,7 +32,7 @@ body:
     attributes:
       label: "Version Information"
       description: "The version info block."
-      placeholder: "Please post Huizebruin-projecten version / ESPHome version / Home Assistant version "
+      placeholder: "Please post huizebruin-projecten version / ESPHome version / Home Assistant version "
   - type: textarea
     id: esphome-version-info
     validations:

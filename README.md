@@ -1,20 +1,20 @@
-# Huizebruin-projecten
+# huizebruin-projecten
 
-| Repository Status | Huizebruin-projecten Repo |
+| Repository Status | huizebruin-projecten Repo |
 | :--- | :--- |
 |  [![last commit time][github-last-commit]][github-master] [![GitHub Activity][commits-shield]][commits] |  [![Made for ESPHome](https://img.shields.io/badge/Made_for-ESPHome-black?logo=esphome)](https://esphome.io) |
-| [![License][license-shield]](LICENSE) [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] | [![Contributors][contributors-shield]][contributors-url] [![GitHub release](https://img.shields.io/github/release/huizebruin/Huizebruin-projecten.svg)](https://GitHub.com/huizebruin/Huizebruin-projecten/releases)
+| [![License][license-shield]](LICENSE) [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] | [![Contributors][contributors-shield]][contributors-url] [![GitHub release](https://img.shields.io/github/release/huizebruin/huizebruin-projecten.svg)](https://GitHub.com/huizebruin/huizebruin-projecten/releases)
 
 
-|  ![Huizebruin-projectenlogo](./static/images/huizebruin-projects.png) |
+|  ![huizebruin-projectenlogo](./static/images/huizebruin-projects.png) |
 
-## Huizebruin-projecten Projects
+## huizebruin-projecten Projects
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 ## Intro
 
-Wat is Huizebruin-projecten.
+Wat is huizebruin-projecten.
 
 ### De ESPHome projecten die door Huizebruin gemaakt zijn komen hier te staan.
 
@@ -40,18 +40,18 @@ En natuurlijk ook in contact komen met meerdere HomeAssistant gebruikers!
 [![Discord][discord-shield]][discord]
 
 
-[commits-shield]: https://img.shields.io/github/commit-activity/m/huizebruin/Huizebruin-projecten.svg
+[commits-shield]: https://img.shields.io/github/commit-activity/m/huizebruin/huizebruin-projecten.svg
 [discord]: https://discord.gg/hKPgwWNHwH
 [discord-shield]: https://img.shields.io/discord/723629686093119650.svg?logo=discord&color=7289da
-[commits]: https://github.com/huizebruin/Huizebruin-projecten/commits/main
-[github-last-commit]: https://img.shields.io/github/last-commit/huizebruin/Huizebruin-projecten.svg?style=plasticr
-[github-master]: https://github.com/huizebruin/Huizebruin-projecten/commits/main
-[license-shield]: https://img.shields.io/github/license/huizebruin/Huizebruin-projecten.svg
-[contributors-url]: https://github.com/huizebruin/Huizebruin-projecten/graphs/contributors
-[contributors-shield]: https://img.shields.io/github/contributors/huizebruin/Huizebruin-projecten.svg
-[forks-shield]: https://img.shields.io/github/forks/huizebruin/Huizebruin-projecten.svg
-[forks-url]: https://github.com/huizebruin/Huizebruin-projecten/network/members
-[stars-shield]: https://img.shields.io/github/stars/huizebruin/Huizebruin-projecten.svg
-[stars-url]: https://github.com/huizebruin/Huizebruin-projecten/stargazers
-[issues-shield]: https://img.shields.io/github/issues/huizebruin/Huizebruin-projecten.svg
-[issues-url]: https://github.com/huizebruin/Huizebruin-projecten/issues
+[commits]: https://github.com/huizebruin/huizebruin-projecten/commits/main
+[github-last-commit]: https://img.shields.io/github/last-commit/huizebruin/huizebruin-projecten.svg?style=plasticr
+[github-master]: https://github.com/huizebruin/huizebruin-projecten/commits/main
+[license-shield]: https://img.shields.io/github/license/huizebruin/huizebruin-projecten.svg
+[contributors-url]: https://github.com/huizebruin/huizebruin-projecten/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/huizebruin/huizebruin-projecten.svg
+[forks-shield]: https://img.shields.io/github/forks/huizebruin/huizebruin-projecten.svg
+[forks-url]: https://github.com/huizebruin/huizebruin-projecten/network/members
+[stars-shield]: https://img.shields.io/github/stars/huizebruin/huizebruin-projecten.svg
+[stars-url]: https://github.com/huizebruin/huizebruin-projecten/stargazers
+[issues-shield]: https://img.shields.io/github/issues/huizebruin/huizebruin-projecten.svg
+[issues-url]: https://github.com/huizebruin/huizebruin-projecten/issues

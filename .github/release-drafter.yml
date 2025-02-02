@@ -66,11 +66,11 @@ template: |
 
   $CHANGES
 
-  **Full Changelog**: https://github.com/huizebruin/Huizebruin-projecten/compare/$PREVIOUS_TAG...$RESOLVED_VERSION
+  **Full Changelog**: https://github.com/huizebruin/huizebruin-projecten/compare/$PREVIOUS_TAG...$RESOLVED_VERSION
 
    _To receive a notification on new releases, click on **Watch** > **Custom** > **Releases** on the top._
 
-   _Be sure to 🌟 this repository for updates! Its a hobby project . Flash it go to the link https://huizebruin.github.io/Huizebruin-projecten/._
+   _Be sure to 🌟 this repository for updates! Its a hobby project . Flash it go to the link https://huizebruin.github.io/huizebruin-projecten/._
 
   ## Contributors
 

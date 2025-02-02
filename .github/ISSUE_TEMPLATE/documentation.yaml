@@ -1,11 +1,11 @@
 name: "Documentation"
-description: "Create an issue to improve the documentation of the Huizebruin-projecten Project"
+description: "Create an issue to improve the documentation of the huizebruin-projecten Project"
 labels: ["documentation", "triage:not-checked"]
 body:
   - type: markdown
     attributes:
       value: |
-        Create a new issue regarding the Huizebruin-projecten documentation
+        Create a new issue regarding the huizebruin-projecten documentation
   - type: dropdown
     id: issue-type
     attributes:

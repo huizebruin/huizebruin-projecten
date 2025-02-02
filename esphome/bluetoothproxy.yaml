@@ -36,7 +36,7 @@ dashboard_import:
 
 packages:
   remote_package:
-    url: https://github.com/huizebruin/Huizebruin-projecten
+    url: https://github.com/huizebruin/huizebruin-projecten
     ref: main
     files:
   #specific esp32 basis settings

@@ -1,5 +1,5 @@
 name: Build
-# Build the ESPHome firmwares for the Huizebruin-projecten project.
+# Build the ESPHome firmwares for the huizebruin-projecten project.
 on:
   push:
     branches:

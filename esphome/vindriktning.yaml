@@ -25,11 +25,11 @@ logger:
   level: INFO
 
 dashboard_import:
-  package_import_url: github://huizebruin/Huizebruin-projecten/esphome/vindriktning.yaml
+  package_import_url: github://huizebruin/huizebruin-projecten/esphome/vindriktning.yaml
 
 packages:
   remote_package:
-    url: https://github.com/huizebruin/Huizebruin-projecten
+    url: https://github.com/huizebruin/huizebruin-projecten
     ref: main
     files:
       - esphome/package/vindriktning.yaml
