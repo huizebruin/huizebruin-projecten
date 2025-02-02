@@ -1,0 +1,33 @@
+# esp32 camera
+#
+# a simple ESPHome integration to make an esp32camera
+# © Huizebruin.nl
+#
+substitutions:
+  device_name: "esp32-camera"
+  name: "esp32camera"
+  device_description: camera systeem op de esp32
+  project_version: "1.0.3" 
+  date: "2-02-2025"
+  
+esphome:
+  name: '${device_name}'
+  name_add_mac_suffix: true
+  comment: '${device_description}'
+  project:
+    name: "huizebruin-projecten.${device_name}"
+    version: "${project_version}"
+  min_version: 2024.12.2
+
+
+dashboard_import:
+  package_import_url: github://huizebruin/huizebruin-projecten/esphome/esp-camera.yaml
+
+packages:
+  remote_package:
+    url: https://github.com/huizebruin/huizebruin-projecten
+    ref: main
+    files:
+  #specific esp32 basis settings
+      - esphome/package/esp32camera.yaml
+    refresh: 0d
