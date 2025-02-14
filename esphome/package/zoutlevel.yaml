@@ -1,0 +1,58 @@
+# Delen en bewerken mag maar laat deze eerste regels staan.
+# Bron : https://www.huizebruin.nl
+# Bron File : https://github.com/huizebruin/huizebruin-projects
+# © Huizebruin.nl
+#  # ⬇ Enable Home Assistant API ⬇ #
+
+# Exposed switches.
+# Switch to restart the salt_level_sensor.
+switch:
+  - platform: restart
+    name: "salt_level_sensor Restart"
+
+sensor:
+  # Uptime sensor.
+  - platform: uptime
+    name: salt_level_sensor Uptime
+
+  # WiFi Signal sensor.
+  - platform: wifi_signal
+    name: salt_level_sensor WiFi Signal
+    update_interval: 60s
+
+  - platform: ultrasonic                                # level sensor in %
+    trigger_pin:
+      number: D1
+      allow_other_uses: true
+    echo_pin:
+      number: D2
+      allow_other_uses: true
+    name: "Level [%]"                                   # name of your sensor
+    update_interval: 10s
+    unit_of_measurement: '%'
+    accuracy_decimals: 0
+    filters:
+      - median:
+          window_size: 5
+          send_every: 5
+          send_first_at: 1
+      - calibrate_linear:
+        - 0.10 -> 100                                   # distance [m] for 100%
+        - 0.70 -> 0                                     # distance [m] for 0%
+      - round: 0
+
+  - platform: ultrasonic                                # level sensor in [m]
+    trigger_pin:
+      number: D1
+      allow_other_uses: true
+    echo_pin:
+      number: D2
+      allow_other_uses: true
+    name: "Level - [m]"                                # name of your sensor
+    accuracy_decimals: 2
+    filters:
+      - median:
+          window_size: 5
+          send_every: 5
+          send_first_at: 1
+    update_interval: 10s

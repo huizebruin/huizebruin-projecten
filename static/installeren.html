@@ -74,10 +74,14 @@
               <input type="radio" name="type" value="mmwave" />
               <div><b>mmwave aan wemos d1 mini</b></div>
             </label>
-                        <label>
-                          <input type="radio" name="type" value="esp32-camera" />
-                          <div><b>esp32-camera</b></div>
-                        </label>
+            <label>
+              <input type="radio" name="type" value="esp32-camera" />
+              <div><b>esp32-camera</b></div>
+            </label>
+            <label>
+              <input type="radio" name="type" value="zoutlevel" />
+              <div><b>Wemos D1 mini (esp8266)-zout level</b></div>
+            </label>
           </div>
 
           <p class="button-row" align="center">
@@ -92,15 +96,31 @@
                                 <a href="https://s.click.aliexpress.com/e/_omFfI1r" target="_blank">wemos d1 mini C aansluiting</a>
                               </li>
                             </ul>
-            <p>verbind de D1 Mini, het liefst met een USB-poort (en dus een 5V-regulator). Er lijken veel versies
-              beschikbaar te zijn met licht verschillende functionaliteiten op dat gebied.</p>
+            <p>verbind de D1 Mini, v2 of v1. 
+               beschikbaar te zijn met licht verschillende functionaliteiten op dat gebied.</p>
             <p>Open het IKEA Vindriktning-apparaat en let op de testpunten op de rand van de printplaat.</p>
-            <p>Verbind:</p>
-            <ul>
-              <li>D1: 5V -> V: +5V</li>
-              <li>D1: G -> V: GND</li>
-              <li>D1: D2 -> C: REST</li>
-            </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>ESP Pin</th>
+          <th>Verbonden met</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>D1: 5V</td>
+          <td>V: +5V</td>
+        </tr>
+        <tr>
+          <td>D1: G</td>
+          <td>V: GND</td>
+        </tr>
+        <tr>
+          <td>D1: D2</td>
+          <td>C: REST</td>
+        </tr>
+      </tbody>
+    </table>
             <p><img src="./assets/vindriktning.avif" class="img-fluid w-25" alt="vindriktning"></p>
           </div>
 
@@ -112,12 +132,7 @@
               </li>
               <li><a href="https://s.click.aliexpress.com/e/_oBIcL5T" target="_blank">ESP32 in usb stick vorm met behuizing</a></li>
               </ul>
-            <p>De Bluetooth proxy van ESPHome geeft Home Assistant maximaal 3 simultane actieve verbindingen te zien.
-              Apparaten die een continue actieve verbinding onderhouden zullen een van deze permanent gebruiken, terwijl
-              apparaten die periodiek hun verbindingen verbroken en hersteld hebben, toestaan dat er meer dan 3 van hen
-              worden gebruikt (op statistiek gebaseerd). Passief gepresenteerde sensorgegevens die door zekere apparaten
-              worden gepresenteerd zonder actieve verbindingen worden afzonderlijk van deze ontvangen en zijn niet
-              beperkt tot een specifieke hoeveelheid.</p>
+            <p>De Bluetooth proxy van ESPHome geeft Home Assistant maximaal 3 simultane actieve verbindingen te zien.</p>
             <p><img src="./assets/ble-esphome.png" class="img-fluid w-25" alt="ble"></p>
           </div>
 
@@ -210,16 +225,57 @@
 
             <p><img src="./assets/esp32-camera.avif" class="img-fluid w-25" alt="esp32-camera"></p>
           </div>
+          <div aria-hidden="true" class="hidden info zoutlevel">
+            <h3>wemos d1 mini zout level meting </h3>
+            <ul>
+              <li>
+                <a href="https://s.click.aliexpress.com/e/_omFfI1r" target="_blank">wemos d1 mini C aansluiting</a>
+              </li>
+              <li>
+                <a href="https://s.click.aliexpress.com/e/_ome5OcK" target="_blank">HC-SR04 Ultrasone sensor</a>
+              </li>
+            </ul>
+            <p>verbind de D1 Mini, v2 of v1.
+              beschikbaar te zijn met licht verschillende functionaliteiten op dat gebied.</p>
+            <p>sluit de volgende pennen aan.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>ESP Pin</th>
+                  <th>Verbonden met</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>D1: 5V</td>
+                  <td>board: +5V</td>
+                </tr>
+                <tr>
+                  <td>D1: G</td>
+                  <td>board: GND</td>
+                </tr>
+                <tr>
+                  <td>D1: D1</td>
+                  <td>board: trigger_pin</td>
+                </tr>
+                <tr>
+                  <td>D1: D2</td>
+                  <td>board: echo_pin</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><img src="./assets/wemos-zoutlevel.png" class="img-fluid w-25" alt="zoutlevel"></p>
+          </div>
 
-          <h2>Foutoplossing</h2>
-          <ul>
-            <li>Er kan noodzakelijk zijn dat u handmatig de bootloader-modus instelt voordat u probeert de ESP te
-              flashen met de WebFlasher.</li>
-            <li>Probeer de `BOOT`-knop op uw bord ingedrukt te houden totdat u ziet dat de WebFlasher het flashgeheugen
-              aan het wissen is en daadwerkelijk de firmware installeert. Dit kan helpen als een reset wordt uitgevoerd
-              in de voorbereidingsstap, aangezien het ingedrukt houden van de `BOOT`-knop ervoor zorgt dat de ESP32
-              opnieuw opstart in de bootloader-modus.</li>
-          </ul>
+<h2>Foutoplossing</h2>
+<ul>
+  <li>Het kan nodig zijn om de bootloader-modus handmatig in te stellen voordat u de ESP probeert te flashen met de
+    WebFlasher. Dit zorgt ervoor dat het apparaat in de juiste modus opstart voor het installeren van firmware.</li>
+  <li>Probeer de <strong>BOOT</strong>-knop op uw bord ingedrukt te houden totdat u ziet dat de WebFlasher begint met
+    het wissen van het flashgeheugen en de firmware installeert. Dit kan nuttig zijn om te voorkomen dat er een reset
+    plaatsvindt tijdens de voorbereiding. Door de <strong>BOOT</strong>-knop ingedrukt te houden, start de ESP32 opnieuw
+    op in de bootloader-modus.</li>
+</ul>
       <h2>Drivers</h2>
 
     Als de seriële poort niet wordt weergegeven, heeft je computer mogelijk de
