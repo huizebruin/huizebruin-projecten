@@ -26,6 +26,7 @@ logger:
 
 dashboard_import:
   package_import_url: github://huizebruin/huizebruin-projecten/esphome/zout_level_sensor.yaml
+  import_full_config: true
 
 packages:
   remote_package:
