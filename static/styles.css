@@ -9,7 +9,11 @@ h1 {
 }
 
 p {
-    font-size: 1.2rem;
+    /* font-size: 1rem; */
+    color: #6c757d;
+}
+ul {
+    /* font-size: 1rem; */
     color: #6c757d;
 }
 .navbar-brand {
@@ -23,7 +27,17 @@ p {
     text-align: center;
 
 }
-
+/* img-fluid class */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px;
+        }
+    
+        .w-25 {
+            width: 25% !important;
+            max-width: 300px;
+        }
 .sidebar {
     margin-top: 10px;
     margin-left: 20px;
