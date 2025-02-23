@@ -6,7 +6,7 @@
 | [![License][license-shield]](LICENSE) [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] | [![Contributors][contributors-shield]][contributors-url] [![GitHub release](https://img.shields.io/github/release/huizebruin/huizebruin-projecten.svg)](https://GitHub.com/huizebruin/huizebruin-projecten/releases)
 
 
-|  ![huizebruin-projectenlogo](./static/images/huizebruin-projects.png) |
+|  ![huizebruin-projectenlogo](./static/assets/huizebruin-projects.png) |
 
 ## huizebruin-projecten Projects
 
