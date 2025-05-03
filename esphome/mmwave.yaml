@@ -3,19 +3,23 @@
 # Bron File : https://github.com/huizebruin/huizebruin-projects
 # © Huizebruin.nl
 substitutions:
-  name: mmwave
-
+  device_name: "mmwave"
+  name: "mmwave"
 esphome:
-  name: ${name}
+  name: '${device_name}'
   name_add_mac_suffix: true
   comment: '${device_description}'
   project:
-    name: "huizebruin-projecten.${name}"
+    name: "huizebruin-projecten.${device_name}"
     version: "${project_version}"
   min_version: 2024.12.0
+
 esp8266:
   board:  d1_mini
   restore_from_flash: true
+
+logger:
+  level: INFO
 
 dashboard_import:
   package_import_url: github://huizebruin/huizebruin-projecten/esphome/mmwave.yaml

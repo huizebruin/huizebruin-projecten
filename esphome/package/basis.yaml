@@ -4,8 +4,8 @@
 # © https://huizebruin.nl
 substitutions:
   device_description: ${name} made by Huizebruin projects version ${project_version}.
-  project_version: "1.0.3"
-  date: "12-01-2025"
+  project_version: "1.0.4"
+  date: "03-05-2025"
 
 preferences:
   flash_write_interval: 120min
@@ -14,7 +14,6 @@ improv_serial:
 
 wifi:
   ap:
-api:
 
 web_server:
   port: 80
@@ -41,7 +40,7 @@ time:
   - platform: homeassistant
     id: time_homeassistant
     on_time_sync:
-      - component.update: ${name}_uptime_timestamp
+      - component.update: S0tool_uptime_timestamp
 
 # https://esphome.io/components/safe_mode  need for ESPHome v2024.6.x
 safe_mode:
@@ -49,10 +48,10 @@ safe_mode:
 sensor:
 #------------------------#  sensoren #------------------------#
   - platform: uptime
-    id: ${name}_uptime
+    id: S0tool_uptime
 
   - platform: template
-    id: ${name}_uptime_timestamp
+    id: S0tool_uptime_timestamp
     name: "${name} online sinds"
     device_class: "timestamp"
     accuracy_decimals: 0
@@ -61,7 +60,7 @@ sensor:
     entity_category: diagnostic
     lambda: |-
       static float timestamp = (
-        id(time_homeassistant).utcnow().timestamp - id(${name}_uptime).state
+        id(time_homeassistant).utcnow().timestamp - id(S0tool_uptime).state
       );
       return timestamp;
 
@@ -73,8 +72,8 @@ sensor:
 
 text_sensor:
   - platform: template
-    name: "tool versie"
-    id: ${name}_versie
+    name: "s0tool_versie"
+    id: s0tool_versie
     icon: 'mdi:alpha-v-circle-outline'
     update_interval: 6h
     entity_category: diagnostic
@@ -84,12 +83,12 @@ text_sensor:
   - platform: wifi_info
     ip_address:
       name: "${name} IP-adres"
-      id: ${name}_ip_adres
+      id: s0tool_ip_adres
       icon: mdi:ip-network
 
     mac_address:
       name: "${name} Mac-adres"
-      id: ${name}_mac_adres
+      id: s0tool_mac_adres
       icon: mdi:folder-key-network-outline
 
 #  restart button  #

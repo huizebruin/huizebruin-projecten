@@ -5,8 +5,7 @@
 #
 substitutions:
   device_name: "zoutlevel"
-  name: "zoutlevel"  
-  
+  name: "zoutlevel"
 esphome:
   name: '${device_name}'
   name_add_mac_suffix: true
