@@ -4,7 +4,7 @@
 # © https://huizebruin.nl
 substitutions:
   device_description: ${name} made by Huizebruin projects version ${project_version}.
-  project_version: "1.0.3" 
+  project_version: "1.0.3"
   date: "12-01-2025"
 
 preferences:
@@ -14,7 +14,6 @@ improv_serial:
 
 wifi:
   ap:
-    
 api:
 
 web_server:

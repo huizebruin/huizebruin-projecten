@@ -2,8 +2,6 @@
 # Bron : https://www.huizebruin.nl
 # Bron File : https://github.com/huizebruin/huizebruin-projects
 # © Huizebruin.nl
-#  # ⬇ Enable Home Assistant API ⬇ # 
-
 # UART Configuration for HLK-LD2410C
 uart:
   id: ld2410_uart
@@ -21,8 +19,6 @@ ld2410:
 # ----------- #
 ### SENSORS ###
 sensor:
-
-# HLK-LD2410C Measured values
   - platform: ld2410
     moving_distance:
       name: "mmWave Moving Distance"
@@ -106,8 +102,6 @@ sensor:
 # ------------------ #
 ### BINARY SENSORS ###
 binary_sensor:
-
-# HLK-LD2410C Occupancy sensors
   - platform: ld2410
     has_target:
       name: "mmWave Presence"
@@ -153,8 +147,6 @@ binary_sensor:
 # ------------ #
 ### SWITCHES ###
 switch:
-
-# HLK-LD2410C config swiches
   - platform: ld2410
     engineering_mode:
       name: "mmWave Engineering mode"
@@ -167,8 +159,6 @@ switch:
 # ----------- #
 ### NUMBERS ###
 number:
-
-# HLK-LD2410C config numbers
   - platform: ld2410
     timeout:
       name: "mmWave Timeout"
@@ -296,8 +286,6 @@ number:
 # ------------- #
 ### SELECTORS ###
 select:
-
-# HLK-LD2410C config selectors
   - platform: ld2410
     distance_resolution:
       name: "mmWave Distance resolution"

@@ -1,9 +1,7 @@
----
-# vindriktning 
-#
-# a simple ESPHome integration to make an vindriktning 
+# Delen en bewerken mag maar laat deze eerste regels staan.
+# Bron : https://www.huizebruin.nl
+# Bron File : https://github.com/huizebruin/huizebruin-projects
 # © Huizebruin.nl
-#
 substitutions:
   device_name: "vindriktning"
   name: "vindriktning"  
