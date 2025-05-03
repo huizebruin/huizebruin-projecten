@@ -30,5 +30,5 @@ packages:
     ref: main
     files:
       - esphome/package/zoutlevel.yaml
-      - esphome/package/basis.yaml
+      - esphome/package/basis_settings.yaml
     refresh: 0d

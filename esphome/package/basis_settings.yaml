@@ -5,8 +5,8 @@
 # © https://huizebruin.nl
 substitutions:
   device_description: ${name} made by Huizebruin projects version ${project_version}.
-  project_version: "1.0.3" 
-  date: "12-01-2025"
+  project_version: "1.0.4" 
+  date: "03-05-2025"
 
 preferences:
   flash_write_interval: 120min
