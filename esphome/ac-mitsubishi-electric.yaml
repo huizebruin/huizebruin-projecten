@@ -19,7 +19,7 @@ esphome:
   # This will allow for (future) project identification,
   # configuration and updates.
   project:
-    name: ac-mitsubishi-electric
+    name: ac-mitsubishi-electric.huizebruin-projecten
     version: "2.0"
 
 esp32:
