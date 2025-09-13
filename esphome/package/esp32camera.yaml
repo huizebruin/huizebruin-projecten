@@ -1,7 +1,7 @@
 esp32:
   board: esp32cam
   framework:
-    type: arduino
+    type: esp-idf
 
 # Enable logging
 
