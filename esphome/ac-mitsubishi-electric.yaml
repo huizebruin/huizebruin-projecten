@@ -2,7 +2,7 @@
 substitutions:
   name: ac-mitsubishi-electric
   friendly_name: AC Mitsubishi Electric
-  vdate: "3.6.6" 
+  vdate: "2.0.1" 
   date: "19-07-2025"
   device_description: ${name} gemaakt door huizebruin.nl versie ${vdate}.
 
@@ -16,6 +16,11 @@ esphome:
       - delay: 30s
       - switch.turn_off:
           id: eps32_s3_led_switch
+  # This will allow for (future) project identification,
+  # configuration and updates.
+  project:
+    name: ac-mitsubishi-electric
+    version: "2.0"
 
 esp32:
   board: esp32-s3-devkitc-1
