@@ -45,8 +45,8 @@ wifi:
     password: "configesp"
 
 improv_serial:
-esp32_improv:
-  authorizer: none
+# esp32_improv:
+#   authorizer: none
 
 ## Captive portal when wifi connection fails
 captive_portal:
