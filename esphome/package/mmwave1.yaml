@@ -14,7 +14,6 @@ uart:
 # HLK-LD2410C Configuration
 ld2410:
   uart_id: ld2410_uart
-  throttle: 1000ms
 
 # ----------- #
 ### SENSORS ###

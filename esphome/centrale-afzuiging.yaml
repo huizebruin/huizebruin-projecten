@@ -9,13 +9,14 @@ substitutions:
 
 esphome:
   name: ${name}
-  platform: ESP8266
-  board: d1_mini
   comment: '${device_description}'
   project:
     name: huizebruin-projecten.${name}
     version: "${vdate}"
-  
+    
+esp8266:
+  board:  d1_mini
+ 
 dashboard_import:
   package_import_url: github://huizebruin/huizebruin-projects/esphome/centrale-afzuiging-esp8266.yaml
 
