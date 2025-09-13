@@ -50,7 +50,9 @@ wifi:
     ssid: "Esp32-Camera Fallback Hotspot"
 
 captive_portal:
-
+improv_serial:
+esp32_improv:
+  authorizer: none
 
 esp32_camera:
   id: espcam

@@ -48,7 +48,7 @@ captive_portal:
 
 dashboard_import:
   package_import_url: github://huizebruin/huizebruin-projecten/esphome/ac-mitsubishi-electric.yaml
-  import_full_config: true # or false
+  import_full_config: false # or true
 # Enable Home Assistant API
 api:
   services:
