@@ -35,12 +35,11 @@ wifi:
   # ssid: !secret ssid
   # password: !secret password
 
-improv_serial:
-
   ap:
     ssid: ${friendly_name}
     password: "configesp"
 
+improv_serial:
 esp32_improv:
   authorizer: none
 
