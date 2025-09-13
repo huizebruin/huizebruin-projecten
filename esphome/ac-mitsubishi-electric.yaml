@@ -36,6 +36,9 @@ wifi:
   # ssid: !secret ssid
   # password: !secret password
 
+improv_serial:
+  baud_rate: 115200
+  
   ap:
     ssid: ${friendly_name}
     password: "configesp"
