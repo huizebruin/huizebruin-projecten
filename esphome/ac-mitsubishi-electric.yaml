@@ -9,8 +9,7 @@ substitutions:
 esphome:
   name: ac-mitsubishi-electric
   friendly_name: ac mitsubishi electric
-  min_version: 2025.8.0
-  name_add_mac_suffix: false
+  name_add_mac_suffix: true
   on_boot:
     priority: 200
     then:
@@ -26,7 +25,7 @@ esp32:
 # Enable logging
 logger:
   #hardware_uart: UART1 # This line can be removed for ESP32 devices
-  level: INFO  
+  level: INFO
 
 # Allow Over-The-Air updates
 ota:
@@ -38,14 +37,20 @@ wifi:
 
 improv_serial:
   baud_rate: 115200
-  
+
   ap:
     ssid: ${friendly_name}
     password: "configesp"
 
+esp32_improv:
+  authorizer: none
+
 ## Captive portal when wifi connection fails
 captive_portal:
 
+dashboard_import:
+  package_import_url: github://huizebruin/huizebruin-projecten/esphome/ac-mitsubishi-electric.yaml
+  import_full_config: true # or false
 # Enable Home Assistant API
 api:
   services:
