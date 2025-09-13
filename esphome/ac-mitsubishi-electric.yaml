@@ -1,0 +1,328 @@
+
+substitutions:
+  name: ac-mitsubishi-electric
+  friendly_name: AC Mitsubishi Electric
+  vdate: "3.6.6" 
+  date: "19-07-2025"
+  device_description: ${name} gemaakt door huizebruin.nl versie ${vdate}.
+
+esphome:
+  name: ac-mitsubishi-electric
+  friendly_name: ac mitsubishi electric
+  min_version: 2025.5.0
+  name_add_mac_suffix: false
+  on_boot:
+    priority: 200
+    then:
+      - delay: 30s
+      - switch.turn_off:
+          id: eps32_s3_led_switch
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  #hardware_uart: UART1 # This line can be removed for ESP32 devices
+  level: INFO  
+
+# Allow Over-The-Air updates
+ota:
+- platform: esphome
+
+wifi:
+  # ssid: !secret ssid
+  # password: !secret password
+
+  ap:
+    ssid: ${friendly_name}
+    password: "configesp"
+
+## Captive portal when wifi connection fails
+captive_portal:
+
+# Enable Home Assistant API
+api:
+  services:
+    # - service: reboot
+    #   then:
+    #     - logger.log: "Esp reboot..."
+    #     - lambda: |-
+    #         ESP.restart();
+    - service: set_remote_temperature
+      variables:
+        temperature: float
+      then:
+## Select between the C version and the F version
+## Uncomment just ONE of the below lines. The top receives the temperature value in C,
+## the bottom receives the value in F, converting to C here.
+        - lambda: 'id(hp).set_remote_temperature(temperature);'
+#        - lambda: 'id(hp).set_remote_temperature((temperature - 32.0) * (5.0 / 9.0));'
+    - service: use_internal_temperature
+      then:
+        - lambda: 'id(hp).set_remote_temperature(0);'
+
+## Uart on CN105
+uart:
+  id: HP_UART
+  baud_rate: 2400
+  tx_pin: GPIO1
+  rx_pin: GPIO2
+
+
+light:
+## G35=RGB WS2812C-2020
+  - platform: esp32_rmt_led_strip
+    name: Led
+    id: led
+    internal: true
+    rgb_order: GRB
+    pin: 35
+    num_leds: 4
+    # RMT 0 channels will be occupied by IR
+    # rmt_channel: 1
+    chipset: ws2812
+    restore_mode: ALWAYS_ON  #OFF?
+
+
+## Bluetooth proxy
+## uncomment if you want to use it
+#esp32_ble_tracker:
+#  scan_parameters:
+#    # We currently use the defaults to ensure Bluetooth
+#    # can co-exist with WiFi In the future we may be able to
+#    # enable the built-in coexistence logic in ESP-IDF
+#    active: true
+
+bluetooth_proxy:
+ active: true
+
+## Enable Web server.
+web_server:
+  port: 80
+  version: 3
+
+## External component reference
+external_components:
+  - source: github://echavet/MitsubishiCN105ESPHome
+    refresh: always
+
+# Climate entity configuration
+climate:
+  - platform: cn105
+    id: hp
+    name: ${friendly_name}
+    icon: mdi:heat-pump
+    visual:
+      min_temperature: 15
+      max_temperature: 27
+      temperature_step:
+        target_temperature: 0.5
+        current_temperature: 0.1
+    compressor_frequency_sensor:
+      name: Compressor Frequency
+    vertical_vane_select:
+      name: Vertical Vane
+    #horizontal_vane_select:
+    #  name: Horizontal Vane
+    outside_air_temperature_sensor:
+      name: Outside Air Temp
+    isee_sensor:
+      name: ISEE Sensor
+    remote_temperature_timeout: 30min
+    debounce_delay : 500ms
+    update_interval: 4s
+    supports:
+      mode: [COOL, HEAT, FAN_ONLY, DRY]
+      fan_mode: [AUTO, QUIET, LOW, MEDIUM, HIGH]
+      swing_mode: ["OFF", VERTICAL]
+    runtime_hours_sensor:
+      name: Runtime Hours
+    kwh_sensor:
+      name: Energy Consumed
+    input_power_sensor:
+      name: Input Power
+    stage_sensor:
+      name: Stage
+      entity_category: diagnostic
+    sub_mode_sensor:
+      name: Sub Mode
+    auto_sub_mode_sensor:
+      name: Auto Sub Mode
+
+sensor:
+## use external temperature from sensor in home assistant
+## uncomment to use this function directly / or use the service in home assistant (see api services)
+#  - platform: homeassistant
+#    id: current_temp
+#    internal: true
+#    entity_id: sensor.selected_temperature_main
+#    on_value:
+#      then:
+#        - lambda: |-
+#            float temp_f = id(current_temp).state;
+#            float temp_c = (temp_f - 32.0) * (5.0 / 9.0);
+#            ESP_LOGD("custom", "Current Temp (F): %.1f, Temp (C): %.1f", temp_f, temp_c);
+#            id(hp).set_remote_temperature(temp_c);
+#    filters:
+#      - heartbeat: 10s
+
+  - platform: wifi_signal # Reports the WiFi signal strength/RSSI in dB
+    name: Signal dB
+    id: wifi_signal_db
+    update_interval: 60s
+    entity_category: diagnostic
+
+  - platform: copy # Reports the WiFi signal strength in %
+    source_id: wifi_signal_db
+    name: Signal %
+    filters:
+      - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+    unit_of_measurement: " %"
+    entity_category: diagnostic
+    device_class: ""
+
+  - platform: uptime # Reports the Uptime in days
+    id: esp32_uptime
+    name: "Uptime"
+    unit_of_measurement: days
+    update_interval: 3600s
+    accuracy_decimals: 1
+    filters:
+      - multiply: 0.000011574
+    device_class: duration
+    state_class: total_increasing
+    entity_category: diagnostic
+
+  - platform: internal_temperature
+    name: Internal ESP temperature
+    entity_category: diagnostic
+
+  - platform: template
+    name: "dg_uart_connected"
+    entity_category: DIAGNOSTIC
+    lambda: |-
+      return (bool) id(hp).isUARTConnected_;
+    update_interval: 30s
+  - platform: template
+    name: "dg_complete_cycles"
+    entity_category: DIAGNOSTIC
+    accuracy_decimals: 0
+    lambda: |-
+      return (unsigned long) id(hp).nbCompleteCycles_;
+    update_interval: 60s
+  - platform: template
+    name: "dg_total_cycles"
+    accuracy_decimals: 0
+    entity_category: DIAGNOSTIC
+    lambda: |-
+      return (unsigned long) id(hp).nbCycles_;
+    update_interval: 60s
+  - platform: template
+    name: "dg_nb_hp_connections"
+    accuracy_decimals: 0
+    entity_category: DIAGNOSTIC
+    lambda: |-
+      return (unsigned int) id(hp).nbHeatpumpConnections_;
+    update_interval: 60s
+  - platform: template
+    name: "dg_complete_cycles_percent"
+    unit_of_measurement: "%"
+    accuracy_decimals: 1
+    entity_category: DIAGNOSTIC
+    lambda: |-      
+      unsigned long nbCompleteCycles = id(hp).nbCompleteCycles_;
+      unsigned long nbCycles = id(hp).nbCycles_;
+      if (nbCycles == 0) {
+        return 0.0;
+      }
+      return (float) nbCompleteCycles / nbCycles * 100.0;
+    update_interval: 60s
+
+switch:
+  - platform: template
+    id: eps32_s3_led_switch
+    name: Led switch #${led_switch}
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON 
+    lambda: return id(eps32_s3_led_switch).state;
+    turn_on_action:
+      - light.turn_on:
+          id: led
+          brightness: !lambda |-
+            // output value must be in range 0 - 1.0
+            return id(led_brightness).state / 100.0;
+    turn_off_action:
+      - light.turn_off:
+          id: led
+
+number:
+    ## Set led brightness
+  - platform: template
+    id: led_brightness
+    name: Led brightness #${led_brightness}
+    icon: mdi:toggle-switch-variant
+    mode: slider
+    entity_category: config
+    optimistic: true
+    min_value: 0
+    max_value: 100
+    step: 10
+    initial_value: 70
+    restore_value: yes
+    unit_of_measurement: "%"
+    on_value:
+      then:
+        - if:
+            condition:
+              - light.is_on: led
+            then:
+            - light.turn_on:
+                id: led
+                brightness: !lambda |-
+                  // output value must be in range 0 - 1.0
+                  return id(led_brightness).state / 100.0;
+
+## Diagnostics
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IP
+      icon: mdi:ip
+    ssid:
+      name: SSID
+      icon: mdi:wifi
+
+  - platform: version
+    name: Version
+    hide_timestamp: true
+    disabled_by_default: false
+    icon: mdi:new-box
+    entity_category: diagnostic
+
+## ESP restart button
+button:
+  - platform: restart
+    id: restart_button
+    name: ESP restart
+
+## G41=Button
+binary_sensor:
+  - platform: gpio
+    id: esp_button
+    pin:
+      number: GPIO41
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+    filters:
+      - delayed_off: 10ms
+    on_multi_click:
+        - timing:
+             - ON for at most 2s
+             - OFF for at least 0.2s
+          then:
+            - switch.toggle: eps32_s3_led_switch

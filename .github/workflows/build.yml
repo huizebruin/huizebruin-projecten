@@ -21,6 +21,7 @@ jobs:
         esphome/centrale-afzuiging.yaml
         esphome/esp32-camera.yaml
         esphome/zout_level_sensor.yaml
+        esphome/ac-mitsubishi-electric.yaml
       esphome-version: 2024.12.2
       release-summary: ${{ github.event_name == 'release' && github.event.release.body || '' }}
       release-url: ${{ github.event_name == 'release' && github.event.release.html_url || '' }}
