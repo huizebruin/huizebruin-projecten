@@ -17,7 +17,6 @@ esphome:
   project:
     name: "huizebruin-projecten.${device_name}"
     version: "${project_version}"
-  min_version: 2024.12.2
 
 
 dashboard_import:
