@@ -2,8 +2,8 @@
 substitutions:
   name: ac-mitsubishi-electric
   friendly_name: AC Mitsubishi Electric
-  vdate: "2.0.1" 
-  date: "19-07-2025"
+  vdate: "2.0.2" 
+  date: "21-10-2025"
   device_description: ${name} gemaakt door huizebruin.nl versie ${vdate}.
 
 esphome:
@@ -20,12 +20,15 @@ esphome:
   # configuration and updates.
   project:
     name: ac-mitsubishi-electric.huizebruin-projecten
-    version: "2.0"
+    version: "2.0.2"
 
 esp32:
-  board: esp32-s3-devkitc-1
+  board: esp32-s3-devkitc-1  
   framework:
     type: esp-idf
+    version: 5.4.0
+  variant: esp32s3
+  flash_size: 8MB
 
 # Enable logging
 logger:
@@ -118,7 +121,7 @@ web_server:
 ## External component reference
 external_components:
   - source: github://echavet/MitsubishiCN105ESPHome
-    refresh: always
+    # refresh: always
 
 # Climate entity configuration
 climate:
