@@ -16,14 +16,12 @@ esphome:
       - delay: 30s
       - switch.turn_off:
           id: eps32_s3_led_switch
-  # This will allow for (future) project identification,
-  # configuration and updates.
   project:
     name: ac-mitsubishi-electric.huizebruin-projecten
-    version: "2.0.2"
+    version: ${vdate}
 
 esp32:
-  board: esp32-s3-devkitc-1  
+  board: esp32-s3-devkitc-1
   framework:
     type: esp-idf
     version: 5.4.0
