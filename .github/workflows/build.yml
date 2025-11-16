@@ -33,9 +33,9 @@ jobs:
     needs: build
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
       - name: Download built firmwares
-        uses: actions/download-artifact@v4.3.0
+        uses: actions/download-artifact@v6.0.0
         with:
           path: firmwares
       - name: Remove intermediate version folder
@@ -76,7 +76,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
 
       - name: 🏗️ Setup website pages
         uses: actions/configure-pages@v5.0.0
