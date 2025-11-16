@@ -117,12 +117,9 @@ web_server:
   version: 3
 
 ## External component reference
-# external_components:
-#   - source: github://echavet/MitsubishiCN105ESPHome
-
-# fix 24-10-2025
 external_components:
-  - source: github://echavet/MitsubishiCN105ESPHome@4adb3ef20866cb7e9a3b877bd45c3d8492e906c1
+  - source: github://echavet/MitsubishiCN105ESPHome
+
 
 # Climate entity configuration
 climate:
