@@ -10,6 +10,7 @@ esphome:
   name: ac-mitsubishi-electric
   friendly_name: ac mitsubishi electric
   name_add_mac_suffix: true
+  comment: '${device_description}'
   on_boot:
     priority: 200
     then:
