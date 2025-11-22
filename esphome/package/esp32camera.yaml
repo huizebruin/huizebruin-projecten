@@ -121,7 +121,7 @@ text_sensor:
     icon: "mdi:label-outline"
     update_interval: 12h
     lambda: |-
-      return {"${vdate}"};
+      return {"${date}"};
       
   - platform: wifi_info
     ip_address:
